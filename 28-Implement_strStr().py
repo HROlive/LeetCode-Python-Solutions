@@ -21,3 +21,16 @@ For the purpose of this problem, we will return 0 when needle is an empty string
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
         return haystack.find(needle) if len(needle) != 0 else 0
+
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        if haystack == needle == '':
+            return 0
+
+        n = len(needle)
+        
+        for i in range(len(haystack) - n + 1):
+            if haystack[i:i+n] == needle:
+                return i
+
+        return -1
