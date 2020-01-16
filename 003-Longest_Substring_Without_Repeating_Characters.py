@@ -21,10 +21,7 @@ Explanation: The answer is "wke", with the length of 3.
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        if not s:
-            return 0
-        
-        max_len = 1
+        max_len = 0
         curr_str = ''
         
         for char in s:
