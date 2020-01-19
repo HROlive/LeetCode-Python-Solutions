@@ -24,6 +24,8 @@ class Solution:
         target = 0
         
         while target < len_nums - 2:
+            if nums[target] > 0:
+                break
             if target > 0 and nums[target] == nums[target-1]:
                 target += 1
                 continue
